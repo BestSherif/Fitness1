@@ -241,6 +241,7 @@ html {
   margin: 0 auto;
   max-width: 144rem;
   min-height: 85rem;
+  background: rgb(25, 28, 35);
   background-image: url("../img/screensaver_third-section.png");
   background-repeat: no-repeat;
   padding-top: 8rem;
@@ -267,8 +268,8 @@ html {
 }
 .third-section__cards {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
-  margin-bottom: 4rem;
   text-align: center;
 }
 .third-section__cards_card {
@@ -277,10 +278,11 @@ html {
   border-radius: 1.6rem;
   width: 60rem;
   height: 20rem;
+  margin-bottom: 4rem;
 }
 .third-section__cards_title {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 3.6rem;
@@ -303,4 +305,59 @@ html {
 }
 .third-section .cards1 {
   background: rgb(255, 63, 0);
+}
+
+.fourth-section {
+  max-width: 144rem;
+  min-height: 104rem;
+  background: rgb(25, 28, 35);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 8rem 28rem 6rem 28rem 4rem 62rem 8rem;
+  grid-template-rows: 8rem repeat(11, 8rem) 8rem;
+}
+.fourth-section-1 {
+  border-radius: 1.6rem;
+  grid-column: 2/5;
+  grid-row: 2/10;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.fourth-section-2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 5.6rem;
+  color: white;
+  grid-column-start: 2;
+  grid-row-start: 11;
+}
+.fourth-section-3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: white;
+  line-height: 3.2rem;
+  grid-column: 2/3;
+  grid-row-start: 12;
+}
+.fourth-section-4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 5.6rem;
+  color: white;
+  grid-column-start: 4;
+  grid-row-start: 11;
+}
+.fourth-section-5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: white;
+  line-height: 3.2rem;
+  grid-column: 4/5;
+  grid-row-start: 12;
 }/*# sourceMappingURL=style.css.map */
