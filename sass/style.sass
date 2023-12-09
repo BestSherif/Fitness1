@@ -6,6 +6,8 @@ html
     font-size: 62.5%
 
 $backgroundColor: rgba(25, 28, 35, 1)
+$backgroundColorSecond: rgba(41, 46, 50, 1)
+
 $mainTextColor: white
 $secondTextColor: rgba(238, 238, 238, 1)
 
@@ -59,6 +61,7 @@ $secondTextColor: rgba(238, 238, 238, 1)
     background: rgb(167,58,21)
     background: radial-gradient(circle, rgba(167,58,21,1) 0%, rgba(25,28,35,1) 44%)
     overflow: hiden
+
     &__logo
         max-width: 31rem
         height: 3.2rem
@@ -125,9 +128,10 @@ $secondTextColor: rgba(238, 238, 238, 1)
         position: absolute
         z-index: 1
         max-width: 100%
-        height: auto
-        top: 8rem
-        right: 26vw
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
     &__incline1
         margin-top: -5rem
         width: 100%
@@ -225,3 +229,29 @@ $secondTextColor: rgba(238, 238, 238, 1)
         max-width: 92rem
         margin: 0 auto
         margin-bottom: 8rem
+    &__cards
+        display: flex
+        justify-content: space-around
+        margin-bottom: 4rem
+        text-align: center
+        &_card
+            padding: 4rem 4rem 4rem 4rem
+            background: $backgroundColorSecond
+            border-radius: 1.6rem
+            width: 60rem
+            height: 20rem
+
+        &_title
+            display: flex
+            flex-direction: row
+            @include font2
+            margin-bottom: 2.4rem
+            img
+                width: 4rem
+                margin-right: 1.6rem
+        &_text
+            @include font4
+            padding-left: 4rem
+            text-align: left
+    .cards1
+        background: rgba(255, 63, 0, 1)

@@ -112,9 +112,10 @@ html {
   position: absolute;
   z-index: 1;
   max-width: 100%;
-  height: auto;
-  top: 8rem;
-  right: 26vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .main-section__incline1 {
   margin-top: -5rem;
@@ -263,4 +264,43 @@ html {
   max-width: 92rem;
   margin: 0 auto;
   margin-bottom: 8rem;
+}
+.third-section__cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.third-section__cards_card {
+  padding: 4rem 4rem 4rem 4rem;
+  background: rgb(41, 46, 50);
+  border-radius: 1.6rem;
+  width: 60rem;
+  height: 20rem;
+}
+.third-section__cards_title {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: white;
+  line-height: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+.third-section__cards_title img {
+  width: 4rem;
+  margin-right: 1.6rem;
+}
+.third-section__cards_text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: rgb(238, 238, 238);
+  padding-left: 4rem;
+  text-align: left;
+}
+.third-section .cards1 {
+  background: rgb(255, 63, 0);
 }/*# sourceMappingURL=style.css.map */
