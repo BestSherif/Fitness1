@@ -1,0 +1,227 @@
+@import "normalize.css"
+@import "reset.css"
+
+// Задаем 1rem = 10px
+html
+    font-size: 62.5%
+
+$backgroundColor: rgba(25, 28, 35, 1)
+$mainTextColor: white
+$secondTextColor: rgba(238, 238, 238, 1)
+
+@mixin font1
+    font-family: 'Montserrat', sans-serif
+    font-weight: 600
+    font-size: 1.6rem
+    color: $mainTextColor
+
+@mixin font2
+    font-family: 'Montserrat', sans-serif
+    font-weight: 600
+    font-size: 3.6rem
+    color: $mainTextColor
+    line-height: 3.2rem
+
+@mixin font3
+    font-family: 'Montserrat', sans-serif
+    font-weight: 900
+    font-size: 24rem
+    color: $mainTextColor
+    letter-spacing: 3rem
+
+@mixin font5
+    font-family: 'Montserrat', sans-serif
+    font-weight: 600
+    font-size: 6.7rem
+    line-height: 8rem
+    color: $secondTextColor
+
+@mixin font4
+    font-family: 'Open Sans', sans-serif
+    font-size: 1.6rem
+    font-weight: 600
+    line-height: 2.4rem
+    color: $secondTextColor
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// li:last-child
+//     margin-right: 0px
+
+.main-section
+    position: relative
+    margin: 0 auto
+    max-width: 144rem
+    min-height: 123.6rem
+    background: rgb(167,58,21)
+    background: radial-gradient(circle, rgba(167,58,21,1) 0%, rgba(25,28,35,1) 44%)
+    overflow: hiden
+    &__logo
+        max-width: 31rem
+        height: 3.2rem
+        margin-right: 6.4rem
+        flex-wrap: wrap
+        padding-left: 5rem
+    &__nav-container
+        display: flex
+        flex-flow: row wrap
+        min-height: 7.2rem
+        align-items: center
+        justify-content: space-between
+        position: relative
+        margin-bottom: 27rem
+        // z-index: 1
+    &__rectangle
+        position: absolute
+        width: 21.1rem
+        height: 54.5rem
+        top: 0rem
+        right: 21.5rem
+        background: rgb(255,76,0)
+        background: linear-gradient(180deg, rgba(255,76,0,0.907127433925159) 22%, rgba(9,4,0,0.7343412568193275) 66%, rgba(9,4,0,1) 100%)
+        opacity: 0.5
+        z-index: 0
+    &__box1
+        display: flex
+        flex-direction: row
+        flex-direction: column
+        max-width: 110rem
+        margin: auto
+    &__box2
+        display: flex
+        justify-content: space-around
+        align-items: center
+        height: 32rem
+        flex-flow: row wrap
+    &__aboutTrainers
+        max-width: 33rem
+        &_img
+            width: 25rem
+            height: 22rem
+    &__aboutTrainers_big
+        @include font2
+        margin-bottom: 1rem
+    &__aboutTrainers_small
+        @include font4
+        line-height: 2.4rem
+
+    &__expirience
+        @include font2
+        aling-self: flex-start
+        // margin: 27.2rem 64rem 30rem 12.6rem
+    &__fitness
+        @include font3
+        align-self: center
+        // margin: -32rem 11rem 89rem 11rem
+    &__grow
+        display: block
+        @include font2
+        align-self: flex-end
+        // margin: -92rem 11rem 89rem 97rem
+    &__girl
+        position: absolute
+        z-index: 1
+        max-width: 100%
+        height: auto
+        top: 8rem
+        right: 26vw
+    &__incline1
+        margin-top: -5rem
+        width: 100%
+        height: auto
+    &__incline2
+        margin-top: -40rem
+        width: 100%
+        height: auto
+.nav-menu
+    position: relative
+    &__list
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+        &-item
+            margin-right: 6.4rem
+            @include font1
+            &_1
+                color: red
+.JoinNow
+    width: 20rem
+    height: 6rem
+    border-radius: 4rem
+    border: none
+    padding: 20px, 32px, 20px, 32px
+    Gap: 8px
+    background-color: rgba(255, 63, 0, 1)
+    @include font1
+    z-index: 1
+
+.second-section
+    max-width: 144rem
+    min-height: 90rem
+    background-color: $backgroundColor
+    margin: 0 auto
+    padding-top: 8rem
+    &__start
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin-bottom: 8rem
+        flex-flow: row wrap
+        &_left
+            @include font5
+            max-width: 56rem
+        &_right
+            @include font4
+            max-width: 47rem
+
+.cards
+    display: flex
+    justify-content: space-around
+    // align-items: center
+    align-content: stretch
+    flex-flow: row wrap
+    &__card
+        display: flex
+        flex-direction: column
+        width: 39rem
+        height: 52rem
+        background-color: rgba(41, 46, 50, 1)
+        border-radius: 1.6rem
+        align-items: center
+        padding-top: 3.2rem
+        &_name
+            @include font2
+            text-align: center
+            margin-bottom: 2.4rem
+        &_img
+            display: block
+            margin-bottom: 2.4rem
+            img
+                display: block
+                width: 3.6rem
+                height: 3.1rem
+        &_text
+            @include font4
+            text-align: center
+
+.third-section
+    margin: 0 auto
+    max-width: 144rem
+    min-height: 85rem
+    background-image: url("/src/img/screensaver_third-section.png")
+    background-repeat: no-repeat
+    padding-top: 8rem
+    &__title
+        @include font5
+        max-width: 92rem
+        margin: 0 auto
+        margin-bottom: 2.4rem
+    &__title2
+        @include font4
+        max-width: 92rem
+        margin: 0 auto
+        margin-bottom: 8rem
