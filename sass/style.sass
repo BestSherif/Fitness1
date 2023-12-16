@@ -1,18 +1,11 @@
 @import "normalize.css"
 @import "reset.css"
 @import "fonts/fonts.sass"
+@import "variables/variables.sass"
 
 // Задаем 1rem = 10px
 html
     font-size: 62.5%
-
-$backgroundColor: rgba(25, 28, 35, 1)
-$backgroundColorSecond: rgba(41, 46, 50, 1)
-
-$mainTextColor: white
-$secondTextColor: rgba(238, 238, 238, 1)
-
-$mainCardColor: rgba(255, 63, 0, 1)
 
 *, ::after, ::before
     margin: 0
@@ -120,7 +113,7 @@ $mainCardColor: rgba(255, 63, 0, 1)
             margin-right: 6.4rem
             @include font1
             &_1
-                color: red
+                color: $thirdTextColor
 .JoinNow
     width: 20rem
     height: 6rem
@@ -286,9 +279,9 @@ $mainCardColor: rgba(255, 63, 0, 1)
     min-height: 90rem
     background-color: $backgroundColor
     text-align: center
-    margin-bottom: 8rem
     &__head
         @include font5
+        margin-bottom: 8rem
     &__cards
         display: flex
         justify-content: space-evenly
@@ -301,7 +294,7 @@ $mainCardColor: rgba(255, 63, 0, 1)
         &_TypeOfSubscription
             background-color: $mainCardColor
             height: 12rem
-            border-radius: 1.6rem
+            border-radius: 1.6rem 1.6rem 0 0
             align-items: center
             .text-big
                 padding-top: 2.4rem
@@ -310,17 +303,68 @@ $mainCardColor: rgba(255, 63, 0, 1)
             .text-small
                 @include font4
         &_price
-            padding-top: 4.3rem
+            width: 40rem
             height: 14rem
-            .text-big
-                display: inline-block
-                @include font6
-            .text-small
-                margin: auto 0
-                display: inline-block
-                padding-bottom: 2rem
-                @include font4
-            .line
-                width: 100%
-                height: 1px
-                background: rgba(165, 165, 165, 1)
+            display: flex
+            align-items: center
+            justify-content: center
+            border-top-style: solid
+            border-bottom-style: solid
+            border-width: 0.1rem
+            border-top-color: rgba(165, 165, 165, 1)
+            border-bottom-color: rgba(165, 165, 165, 1)
+        &_advantage
+            width: 40rem
+            height: 17rem
+            @include font4
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: flex-start
+            padding-left: 4rem
+            border-bottom-style: solid
+            border-width: 0.1rem
+            border-top-color: rgba(165, 165, 165, 1)
+        &_moreInformation
+            width: 40rem
+            height: 16rem
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-evenly
+
+    .blockPrice
+        display: flex
+        width: 20rem
+        max-height: 78rem
+        align-items: center
+        justify-content: center
+        &-textBig
+            @include font6
+            color: $thirdTextColor
+        &-textSmall
+            @include font4
+
+        .line
+            width: 100%
+            height: 1px
+            background: rgba(165, 165, 165, 1)
+
+.moreInformation
+    &__button
+        width: 33rem
+        height: 7rem
+        border-radius: 40rem
+        background-color: $mainCardColor
+        @include font1
+    &__text
+        @include font7
+
+.sixth-section
+    width: 144rem
+    min-height: 50rem
+    margin: 0 auto
+    background-color: $backgroundColor
+    background-image: url("../img/StrongMan.png")
+    background-repeat: no-repeat
+    padding-left: 8rem

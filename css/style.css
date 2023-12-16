@@ -145,7 +145,7 @@ html {
   color: white;
 }
 .nav-menu__list-item_1 {
-  color: red;
+  color: rgb(255, 63, 0);
 }
 
 .JoinNow {
@@ -397,7 +397,6 @@ html {
   min-height: 90rem;
   background-color: rgb(25, 28, 35);
   text-align: center;
-  margin-bottom: 8rem;
 }
 .fifth-section__head {
   font-family: "Montserrat", sans-serif;
@@ -405,6 +404,7 @@ html {
   font-size: 6.7rem;
   line-height: 8rem;
   color: rgb(238, 238, 238);
+  margin-bottom: 8rem;
 }
 .fifth-section__cards {
   display: flex;
@@ -420,7 +420,7 @@ html {
 .fifth-section__card_TypeOfSubscription {
   background-color: rgb(255, 63, 0);
   height: 12rem;
-  border-radius: 1.6rem;
+  border-radius: 1.6rem 1.6rem 0 0;
   align-items: center;
 }
 .fifth-section__card_TypeOfSubscription .text-big {
@@ -440,29 +440,94 @@ html {
   color: rgb(238, 238, 238);
 }
 .fifth-section__card_price {
-  padding-top: 4.3rem;
+  width: 40rem;
   height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 0.1rem;
+  border-top-color: rgb(165, 165, 165);
+  border-bottom-color: rgb(165, 165, 165);
 }
-.fifth-section__card_price .text-big {
-  display: inline-block;
+.fifth-section__card_advantage {
+  width: 40rem;
+  height: 17rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-left: 4rem;
+  border-bottom-style: solid;
+  border-width: 0.1rem;
+  border-top-color: rgb(165, 165, 165);
+}
+.fifth-section__card_moreInformation {
+  width: 40rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.fifth-section .blockPrice {
+  display: flex;
+  width: 20rem;
+  max-height: 78rem;
+  align-items: center;
+  justify-content: center;
+}
+.fifth-section .blockPrice-textBig {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 5rem;
   line-height: 5.6rem;
   color: white;
+  color: rgb(255, 63, 0);
 }
-.fifth-section__card_price .text-small {
-  margin: auto 0;
-  display: inline-block;
-  padding-bottom: 2rem;
+.fifth-section .blockPrice-textSmall {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 2.4rem;
   color: rgb(238, 238, 238);
 }
-.fifth-section__card_price .line {
+.fifth-section .blockPrice .line {
   width: 100%;
   height: 1px;
   background: rgb(165, 165, 165);
+}
+
+.moreInformation__button {
+  width: 33rem;
+  height: 7rem;
+  border-radius: 40rem;
+  background-color: rgb(255, 63, 0);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: white;
+}
+.moreInformation__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  color: rgb(238, 238, 238);
+}
+
+.sixth-section {
+  width: 144rem;
+  min-height: 50rem;
+  margin: 0 auto;
+  background-color: rgb(25, 28, 35);
+  background-image: url("../img/StrongMan.png");
+  background-repeat: no-repeat;
+  padding-left: 8rem;
 }/*# sourceMappingURL=style.css.map */
