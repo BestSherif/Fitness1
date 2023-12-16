@@ -529,5 +529,16 @@ html {
   background-color: rgb(25, 28, 35);
   background-image: url("../img/StrongMan.png");
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding-left: 8rem;
+}
+.sixth-section__mainText {
+  max-width: 47rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 6.7rem;
+  line-height: 8rem;
+  color: rgb(238, 238, 238);
 }/*# sourceMappingURL=style.css.map */
