@@ -12,14 +12,8 @@
       rel="stylesheet"
     />
 
-    <!-- Чистим от стандартных стилей настроки браузера -->
-    <link rel="stylesheet" href="css/reset.css" />
-
-    <!-- подключаем normalize.css, тоже чистит собственные CSS настройки браузера-->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Подключаем файл CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <!-- Ввести название проекта, отображается в поисковой выдаче -->
     <title>Website for a gym</title>
     <!-- Заполнить уникальным описанием -->
@@ -55,7 +49,7 @@
           <p class="main-section__grow">Grow Your Body</p>
         </div>
         <div class="main-section__girl">
-          <img src="img/Girl.png" alt="" />
+          <img src="img/Girl.png" class="girl" alt="" />
         </div>
         <div class="main-section__box2">
           <div class="main-section__aboutTrainers">
@@ -171,9 +165,11 @@
           </div>
         </div>
       </section>
-      <!-- //block created on Grid -->
+      <!-- block created on Grid -->
       <section class="fourth-section">
-        <img class="fourth-section-1" src="img/weightsLeft.png" alt="" />
+        <div class="fourth-section-1">
+          <img class="fourth-section-1__img" src="img/weightsLeft.png" alt="" />
+        </div>
         <div class="fourth-section-2">350+</div>
         <div class="fourth-section-3">Expert coach</div>
         <div class="fourth-section-4">80+</div>
@@ -189,7 +185,11 @@
           <img src="icons/arrowsRight.png" alt="" />
         </div>
         <div class="fourth-section-9">
-          <img src="img/weightsRight.png" alt="" />
+          <img
+            class="fourth-section-9__img"
+            src="img/weightsRight.png"
+            alt=""
+          />
         </div>
       </section>
       <section class="fifth-section">
@@ -311,6 +311,30 @@
       <section class="sixth-section">
         <div class="sixth-section__mainText">Let’s Join membership</div>
         <button class="JoinNow">JoinNow &#8594;</button>
+      </section>
+      <section class="eighthSection">
+        <div class="eighthSection-icons">
+          <img
+            src="icons/twitter.png"
+            class="eighthSection-icons__img"
+            alt=""
+          />
+          <img
+            src="icons/instagram.png"
+            class="eighthSection-icons__img"
+            alt=""
+          />
+          <img
+            src="icons/youtube.png"
+            class="eighthSection-icons__img"
+            alt=""
+          />
+        </div>
+        <div class=""></div>
+        <div class="eighthSection-img">
+          <img class="main-section__logo" src="img/CoreEnergy.png" alt="" />
+        </div>
+        <div class="eighthSection-text">Fitness Trainers</div>
       </section>
     </main>
     <footer>
