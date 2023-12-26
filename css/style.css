@@ -1,7 +1,25 @@
-@import "normalize.css";
-@import "reset.css";
 html {
   font-size: 62.5%;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+@media (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
 }
 
 *, ::after, ::before {
@@ -34,6 +52,12 @@ html {
   justify-content: space-between;
   position: relative;
   margin-bottom: 27rem;
+  align-content: space-around;
+}
+@media (max-width: 900px) {
+  .main-section__nav-container {
+    justify-content: center;
+  }
 }
 .main-section__rectangle {
   position: absolute;
@@ -45,6 +69,8 @@ html {
   background: linear-gradient(180deg, rgba(255, 76, 0, 0.9071274339) 22%, rgba(9, 4, 0, 0.7343412568) 66%, rgb(9, 4, 0) 100%);
   opacity: 0.5;
   z-index: 0;
+  right: 5rem;
+  opacity: 0.3;
 }
 .main-section__box1 {
   display: flex;
@@ -99,6 +125,26 @@ html {
   letter-spacing: 3rem;
   align-self: center;
 }
+@media (max-width: 1200px) {
+  .main-section__fitness {
+    font-size: 18rem;
+  }
+}
+@media (max-width: 900px) {
+  .main-section__fitness {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 600px) {
+  .main-section__fitness {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 900px) {
+  .main-section__fitness {
+    z-index: 2;
+  }
+}
 .main-section__grow {
   display: block;
   font-family: "Montserrat", sans-serif;
@@ -108,14 +154,28 @@ html {
   line-height: 3.2rem;
   align-self: flex-end;
 }
+@media (max-width: 900px) {
+  .main-section__grow {
+    z-index: 2;
+  }
+}
 .main-section__girl {
   position: absolute;
   z-index: 1;
-  max-width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.main-section__girl .girl {
+  width: 70rem;
+  height: 120rem;
+}
+@media (max-width: 900px) {
+  .main-section__girl .girl {
+    width: 50rem;
+    height: 80rem;
+  }
 }
 .main-section__incline1 {
   margin-top: -5rem;
@@ -170,6 +230,11 @@ html {
   margin: 0 auto;
   padding-top: 8rem;
 }
+@media (max-width: 900px) {
+  .second-section {
+    padding-top: 0rem;
+  }
+}
 .second-section__start {
   display: flex;
   justify-content: space-around;
@@ -184,6 +249,11 @@ html {
   line-height: 8rem;
   color: rgb(238, 238, 238);
   max-width: 56rem;
+}
+@media (max-width: 900px) {
+  .second-section__start_left {
+    margin-bottom: 3rem;
+  }
 }
 .second-section__start_right {
   font-family: "Open Sans", sans-serif;
@@ -203,12 +273,18 @@ html {
 .cards__card {
   display: flex;
   flex-direction: column;
-  width: 39rem;
-  height: 52rem;
+  max-width: 39rem;
+  min-height: 52rem;
   background-color: rgb(41, 46, 50);
   border-radius: 1.6rem;
   align-items: center;
   padding-top: 3.2rem;
+  margin-right: 1rem;
+}
+@media (max-width: 900px) {
+  .cards__card {
+    margin-bottom: 5rem;
+  }
 }
 .cards__card_name {
   font-family: "Montserrat", sans-serif;
@@ -227,6 +303,12 @@ html {
   display: block;
   width: 3.6rem;
   height: 3.1rem;
+}
+@media (max-width: 900px) {
+  .cards__card_img img {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 .cards__card_text {
   font-family: "Open Sans", sans-serif;
@@ -313,17 +395,24 @@ html {
   background: rgb(25, 28, 35);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 8rem 28rem 6rem 28rem 4rem 62rem 8rem;
-  grid-template-rows: 8rem repeat(11, 8rem) 8rem;
+  grid-template-columns: 8rem minmax(min-content, 28rem) 6rem minmax(min-content, 28rem) 4rem minmax(min-content, 62rem) 8rem;
+  grid-template-rows: 8rem repeat(auto-fit, minmax(8rem, max-content)) 8rem;
+}
+@media (max-width: 900px) {
+  .fourth-section {
+    frid-template-rows: 1rem repeat(auto-fit, minmax(8rem, max-content)) 1rem;
+  }
 }
 .fourth-section-1 {
-  border-radius: 1.6rem;
   grid-column: 2/5;
   grid-row: 2/10;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+.fourth-section-1__img {
+  border-radius: 1.6rem;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .fourth-section-2 {
   font-family: "Montserrat", sans-serif;
@@ -331,8 +420,8 @@ html {
   font-size: 5rem;
   line-height: 5.6rem;
   color: white;
-  grid-column-start: 2;
-  grid-row-start: 11;
+  grid-column: 2/3;
+  grid-row: 11/12;
 }
 .fourth-section-3 {
   font-family: "Montserrat", sans-serif;
@@ -341,7 +430,7 @@ html {
   color: white;
   line-height: 3.2rem;
   grid-column: 2/3;
-  grid-row-start: 12;
+  grid-row: 12/13;
 }
 .fourth-section-4 {
   font-family: "Montserrat", sans-serif;
@@ -349,8 +438,8 @@ html {
   font-size: 5rem;
   line-height: 5.6rem;
   color: white;
-  grid-column-start: 4;
-  grid-row-start: 11;
+  grid-column: 4/5;
+  grid-row: 11/12;
 }
 .fourth-section-5 {
   font-family: "Montserrat", sans-serif;
@@ -359,7 +448,7 @@ html {
   color: white;
   line-height: 3.2rem;
   grid-column: 4/5;
-  grid-row-start: 12;
+  grid-row: 12/13;
 }
 .fourth-section-6 {
   font-family: "Montserrat", sans-serif;
@@ -370,6 +459,11 @@ html {
   grid-column: 6/7;
   grid-row: 2/4;
 }
+@media (max-width: 900px) {
+  .fourth-section-6 {
+    font-size: 4.5rem;
+  }
+}
 .fourth-section-7 {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
@@ -377,18 +471,24 @@ html {
   line-height: 2.4rem;
   color: rgb(238, 238, 238);
   grid-column: 6/7;
-  grid-row: 4;
+  grid-row: 4/5;
   padding-top: 2.4rem;
 }
 .fourth-section-8 {
-  grid-column-start: 6;
-  grid-row-start: 5;
+  grid-column: 6/7;
+  grid-row: 5/6;
   padding-top: 4rem;
 }
 .fourth-section-9 {
   padding-top: 4rem;
   grid-column: 6/7;
   grid-row: 6/13;
+}
+.fourth-section-9__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .fifth-section {
@@ -416,6 +516,11 @@ html {
   height: 58rem;
   background-color: rgb(41, 46, 50);
   border-radius: 1.6rem;
+}
+@media (max-width: 900px) {
+  .fifth-section__card {
+    margin-bottom: 5rem;
+  }
 }
 .fifth-section__card_TypeOfSubscription {
   background-color: rgb(255, 63, 0);
@@ -523,12 +628,13 @@ html {
 }
 
 .sixth-section {
-  width: 144rem;
+  max-width: 144rem;
   min-height: 50rem;
   margin: 0 auto;
   background-color: rgb(25, 28, 35);
   background-image: url("../img/StrongMan.png");
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -541,4 +647,89 @@ html {
   font-size: 6.7rem;
   line-height: 8rem;
   color: rgb(238, 238, 238);
+}
+
+.eighthSection {
+  max-width: 144rem;
+  min-height: 7rem;
+  margin: 0 auto;
+  background-color: rgb(25, 28, 35);
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: stretch;
+}
+.eighthSection-icons__img {
+  margin-right: 0.3rem;
+}
+.eighthSection-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: rgb(238, 238, 238);
+}
+
+.sectionNinth {
+  max-width: 144rem;
+  min-height: 30rem;
+  background-color: rgb(25, 28, 35);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 0.1rem;
+  border-top-color: #a5a5a5;
+  border-bottom-color: #a5a5a5;
+}
+.sectionNinth-card {
+  width: 35rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sectionNinth-card__icon img {
+  width: 5.8rem;
+  height: 5.8rem;
+  margin-bottom: 2.4rem;
+}
+.sectionNinth-card__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+.sectionNinth-card__contact {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: rgb(238, 238, 238);
+}
+.sectionNinth-aboutTheDeveloper {
+  padding-top: 1rem;
+  max-width: 144rem;
+  height: 5rem;
+  margin: 0 auto;
+  background-color: rgb(25, 28, 35);
+  text-align: center;
+}
+.sectionNinth-aboutTheDeveloper a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+  color: white;
+}
+.sectionNinth-aboutTheDeveloper a .fa-brands {
+  height: 2rem;
+  width: 2rem;
 }/*# sourceMappingURL=style.css.map */
